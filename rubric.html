@@ -1,0 +1,440 @@
+<!DOCTYPE html><html><head>
+      <title>rubric</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////home/grace/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.8.18/crossnote/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="project-3-duck-park">Project 3: Duck Park </h1>
+<p><strong>CS 415 - Operating Systems</strong><br>
+<strong>Spring 2025 - Prof. Allen Malony</strong><br>
+<strong>Due date:</strong> <em>11:59 pm, Friday June 6th</em></p>
+<h2 id="introduction">Introduction </h2>
+<p>In this project you will build a discrete element distributed simulation based on the roller coaster synchronization problem. You'll simulate an amusement park where threads enter, explore the park, obtain tickets, queue for rides, board roller coasters, disembark, and return to the park environment.</p>
+<h2 id="project-details">Project Details </h2>
+<h3 id="implement-a-solution-to-the-roller-coaster-synchronization-problem-with-the-following-parameters">Implement a solution to the roller coaster synchronization problem with the following parameters: </h3>
+<p>Suppose there are <em>n</em> passenger threads and a car thread. The passengers repeatedly wait to take rides in the car, which can hold <em>C</em> passengers, where <em>C</em> &lt; <em>n</em>. The car can go around the tracks only when it is full.</p>
+<p>Required synchronization operations:</p>
+<ul>
+<li>Passengers should invoke <code>board</code> and <code>unboard</code>.</li>
+<li>The car should invoke <code>load</code>, <code>run</code> and <code>unload</code>.</li>
+</ul>
+<p>Synchronization constraints:</p>
+<ul>
+<li>Passengers cannot <code>board</code> until the car has invoked <code>load</code>.</li>
+<li>The car cannot depart until <em>C</em> passengers have <code>boarded</code>.</li>
+<li>Passengers cannot <code>unboard</code> until the car has invoked <code>unload</code>.</li>
+</ul>
+<h3 id="to-generalize-the-solution-to-more-than-one-car-we-have-to-satisfy-some-additional-constraints">To generalize the solution to more than one car, we have to satisfy some additional constraints </h3>
+<ul>
+<li>Only one car can be boarding at a time.</li>
+<li>Multiple cars can be on the track concurrently.</li>
+<li>Since cars can't pass each other, they have to unload in the same order they boarded.</li>
+<li>All the threads from one carload must disembark (<code>unload</code>) before any of the threads from subsequent carloads.</li>
+</ul>
+<h3 id="build-the-amusement-park-simulation">Build the amusement park simulation </h3>
+<ul>
+<li>Threads enter the park and sleep for some time before wanting to ride the coaster (maybe they are playing games, eating funnel cake, etc.).</li>
+<li>Threads need to get a ticket from a ticket booth. Only one thread can get a ticket at a time.</li>
+<li>Threads can load on their own (instantaneous).</li>
+<li>Threads will wait in the car until the car is running</li>
+</ul>
+<h3 id="implement-these-additional-features">Implement these additional features: </h3>
+<ul>
+<li>If only one thread is in the park and ready to ride, the car should depart without waiting.</li>
+<li>Add a timer to make partially-filled cars depart after a set waiting period.</li>
+<li>Use time intervals for:
+<ul>
+<li>Park exploration (sleeping)</li>
+<li>Car waiting period</li>
+<li>Ride duration</li>
+</ul>
+</li>
+<li>Use random time intervals for:
+<ul>
+<li>Threads waiting in the park (1-10 sec)</li>
+</ul>
+</li>
+</ul>
+<br>
+<h3 id="illustration">Illustration: </h3>
+<img src="pic.png">
+<p>The figure displays three circles encapsluating the three states of the project: park, ticket, ride. In the first circle, there are four smiley faces representing threads that are hanging out in the park. From this group of smiley faces, and arrow points from them to the second conjoined circle where there is a queue of smiley faces at a ticket booth. This is labeled ticket queue. From the booth there is an arrow pointing to the third "ride" state that is labeled "embark". Here, we see two roller coasters waiting and one smiley face in the first car waiting. There is also a full roller coaster depicted to be running on the track. There is a final arrow form the ride element back to the park labeled "disembark".</p>
+<h3 id="function--lib-requirements">Function &amp; lib requirements: </h3>
+<p>Library</p>
+<ul>
+<li>&lt;pthread.h&gt;</li>
+</ul>
+<p>Functions you need</p>
+<ul>
+<li><code>pthread_create()</code></li>
+<li><code>pthread_exit()</code></li>
+<li><code>pthread_join()</code></li>
+<li><code>pthread_mutex_lock()</code></li>
+<li><code>pthread_mutex_unlock()</code></li>
+<li><code>pthread_cond_wait()</code></li>
+<li><code>pthread_cond_broadcast() or pthread_cond_signal()</code></li>
+<li><code>pthread_barrier_wait()</code></li>
+<li><code>pthread_barrier_init()</code></li>
+<li><code>sched_yield() (optional but strongly recommended)</code></li>
+</ul>
+<br>
+<h2 id="part-1-single-threaded-solution">Part 1: Single Threaded Solution </h2>
+<p>Develop and test each component with a single thread to verify basic functionality.</p>
+<h2 id="part-2-multi-threaded-solution">Part 2: Multi-threaded Solution </h2>
+<p>Test your implementation with multiple threads entering and exiting at varying times to ensure correct synchronization.</p>
+<h2 id="part-3-monitor">Part 3: Monitor </h2>
+<p>Create a monitoring system that:</p>
+<ul>
+<li>Reports on the state of all queues (ticket and ride)</li>
+<li>Regularly samples and displays system state</li>
+<li>Implements inter-process communication using pipes</li>
+</ul>
+<h2 id="deliverables">Deliverables </h2>
+<p>Code that utilizes Pthreads to implement the discrete element distributed system.<br>
+Terminal output that reflects the state of the system.<br>
+With monitoring, output will show the states of the queues.</p>
+<p>Your output does <strong>not</strong> have to match exactly, but it will include the <strong>time</strong> and be neat and descriptive. It should demonstrate that your simulation working seamlessly with parallelism and synchronicity.</p>
+<p>Report: Write a 1-2 page report on your project using the sample report collection format given. Your report could also discuss your synchronization approach, potential deadlocks and how your avoided them, and how you tested edge cases. Explain design decisions and trade-offs made.<br>
+Feel free to go over the limit if you wish. Report format and content suggestions are given in the<br>
+report collection template. If you are not able to complete all 3 parts, state in your report which<br>
+part you finished, so partial credit can be given.</p>
+<h2 id="structure-requirements">Structure Requirements </h2>
+<p>For a project to be accepted, the project must contain the following files and meet the following<br>
+requirements: (You must use the C programming language with the pthread library for this<br>
+assignment. No projects written in another programming language will be accepted.)</p>
+<p><strong>park.c</strong>: this is the main program</p>
+<p><strong>Makefile</strong>: Your project must include a standard make file. It must produce the executable with<br>
+the following names: <strong>park</strong></p>
+<p><strong>How to run</strong>:<br>
+USAGE:<br>
+./park [OPTIONS]</p>
+<p>OPTIONS:<br>
+-n, -INT       Number of passenger threads<br>
+-c,  INT          Number of cars<br>
+-p,  INT    Capacity per car<br>
+-w,  INT         Car waiting period in seconds<br>
+-r,  INT         Ride duration in seconds<br>
+-h, --help       Display a help message</p>
+<p>EXAMPLE:<br>
+./park -n 30 -c 4 -p 6 -w 8 -r 10</p>
+<p>Use the <code>getopt()</code> function in main. See appendix for details.</p>
+<p>Include <strong>default options</strong> that will work without defining the flags.</p>
+<p><strong>What to output</strong>: Terminal output showing your simulation running in real time.</p>
+<p><strong>Report</strong>: in pdf format</p>
+<p><strong>Note</strong>: Additionally, you are allowed to add any other *.h and *.c files you wish. However, when<br>
+we run your code we will only be running the server file. Make sure your code runs in the VM<br>
+before submission.</p>
+<br>
+<p>Example output:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>===== DUCK PARK SIMULATION =====
+[Monitor] Simulation started with parameters:
+- Number of passenger threads: 20
+- Number of cars: 3
+- Capacity per car: 5
+- Park exploration time: 2-5 seconds
+- Car waiting period: 10 seconds
+- Ride duration: 8 seconds
+
+[Time: 00:00:01] Passenger 1 entered the park
+[Time: 00:00:01] Passenger 2 entered the park
+[Time: 00:00:02] Passenger 3 entered the park
+[Time: 00:00:02] Passenger 4 entered the park
+[Time: 00:00:02] Passenger 1 is exploring the park...
+[Time: 00:00:03] Passenger 5 entered the park
+[Time: 00:00:03] Passenger 2 is exploring the park...
+
+[Monitor] System State at 00:00:05
+Ticket Queue: []
+Ride Queue: []
+Car 1 Status: WAITING (0/5 passengers)
+Car 2 Status: WAITING (0/5 passengers)
+Car 3 Status: WAITING (0/5 passengers)
+Passengers in park: 5 (5 exploring, 0 in queues, 0 on rides)
+
+[Time: 00:00:06] Passenger 1 finished exploring, heading to ticket booth
+[Time: 00:00:06] Passenger 1 waiting in ticket queue
+[Time: 00:00:06] Passenger 1 acquired a ticket
+[Time: 00:00:06] Passenger 1 joined the ride queue
+[Time: 00:00:07] Passenger 3 is exploring the park...
+[Time: 00:00:08] Passenger 2 finished exploring, heading to ticket booth
+[Time: 00:00:08] Passenger 2 waiting in ticket queue
+[Time: 00:00:08] Passenger 2 acquired a ticket
+[Time: 00:00:08] Passenger 2 joined the ride queue
+[Time: 00:00:08] Passenger 4 is exploring the park...
+
+[Time: 00:00:10] Car 1 invoked load()
+[Time: 00:00:10] Passenger 1 boarded Car 1
+[Time: 00:00:10] Passenger 2 boarded Car 1
+[Time: 00:00:10] Passenger 5 is exploring the park...
+
+[Monitor] System State at 00:00:10
+Ticket Queue: []
+Ride Queue: [Passenger 1, Passenger 2]
+Car 1 Status: LOADING (2/5 passengers)
+Car 2 Status: WAITING (0/5 passengers)
+Car 3 Status: WAITING (0/5 passengers)
+Passengers in park: 5 (3 exploring, 0 in queues, 2 on rides)
+
+[Time: 00:00:11] Passenger 6 entered the park
+[Time: 00:00:12] Passenger 7 entered the park
+[Time: 00:00:13] Passenger 3 finished exploring, heading to ticket booth
+[Time: 00:00:13] Passenger 3 waiting in ticket queue
+[Time: 00:00:13] Passenger 3 acquired a ticket
+[Time: 00:00:13] Passenger 3 joined the ride queue
+[Time: 00:00:13] Passenger 3 boarded Car 1
+[Time: 00:00:14] Passenger 4 finished exploring, heading to ticket booth
+[Time: 00:00:14] Passenger 4 waiting in ticket queue
+[Time: 00:00:14] Passenger 4 acquired a ticket
+[Time: 00:00:14] Passenger 4 joined the ride queue
+[Time: 00:00:14] Passenger 4 boarded Car 1
+[Time: 00:00:15] Passenger 5 finished exploring, heading to ticket booth
+[Time: 00:00:15] Passenger 5 waiting in ticket queue
+[Time: 00:00:15] Passenger 5 acquired a ticket
+[Time: 00:00:15] Passenger 5 joined the ride queue
+[Time: 00:00:15] Passenger 5 boarded Car 1
+
+[Time: 00:00:15] Car 1 is full with 5 passengers
+[Time: 00:00:15] Car 1 departed for its run
+
+[Monitor] System State at 00:00:15
+Ticket Queue: []
+Ride Queue: []
+Car 1 Status: RUNNING (5/5 passengers)
+Car 2 Status: WAITING (0/5 passengers)
+Car 3 Status: WAITING (0/5 passengers)
+Passengers in park: 7 (2 exploring, 0 in queues, 5 on rides)
+
+[Time: 00:00:16] Passenger 6 is exploring the park...
+[Time: 00:00:17] Passenger 7 is exploring the park...
+[Time: 00:00:18] Passenger 8 entered the park
+[Time: 00:00:19] Passenger 9 entered the park
+[Time: 00:00:20] Car 2 invoked load()
+
+[Monitor] System State at 00:00:20
+Ticket Queue: []
+Ride Queue: []
+Car 1 Status: RUNNING (5/5 passengers)
+Car 2 Status: LOADING (0/5 passengers)
+Car 3 Status: WAITING (0/5 passengers)
+Passengers in park: 9 (4 exploring, 0 in queues, 5 on rides)
+
+[Time: 00:00:21] Passenger 6 finished exploring, heading to ticket booth
+[Time: 00:00:21] Passenger 6 waiting in ticket queue
+[Time: 00:00:21] Passenger 6 acquired a ticket
+[Time: 00:00:21] Passenger 6 joined the ride queue
+[Time: 00:00:21] Passenger 6 boarded Car 2
+[Time: 00:00:22] Passenger 7 finished exploring, heading to ticket booth
+[Time: 00:00:22] Passenger 7 waiting in ticket queue
+[Time: 00:00:22] Passenger 7 acquired a ticket
+[Time: 00:00:22] Passenger 7 joined the ride queue
+[Time: 00:00:22] Passenger 7 boarded Car 2
+[Time: 00:00:23] Car 1 finished its run
+[Time: 00:00:23] Car 1 invoked unload()
+[Time: 00:00:23] Passenger 1 unboarded Car 1
+[Time: 00:00:23] Passenger 2 unboarded Car 1
+[Time: 00:00:23] Passenger 3 unboarded Car 1
+[Time: 00:00:23] Passenger 4 unboarded Car 1
+[Time: 00:00:23] Passenger 5 unboarded Car 1
+[Time: 00:00:23] Passenger 1 is exploring the park...
+[Time: 00:00:23] Passenger 2 is exploring the park...
+
+[Time: 00:00:25] Passenger 8 is exploring the park...
+
+[Monitor] System State at 00:00:25
+Ticket Queue: []
+Ride Queue: [Passenger 6, Passenger 7]
+Car 1 Status: WAITING (0/5 passengers)
+Car 2 Status: LOADING (2/5 passengers)
+Car 3 Status: WAITING (0/5 passengers)
+Passengers in park: 9 (7 exploring, 0 in queues, 2 on rides)
+
+*** Simulation continues... ***
+
+[Monitor] FINAL STATISTICS:
+Total simulation time: 00:05:00
+Total passengers served: 42
+Total rides completed: 12
+Average wait time in ticket queue: 1.2 seconds
+Average wait time in ride queue: 3.5 seconds
+Average car utilization: 78% (3.9/5 passengers per ride)
+</code></pre><br>
+<h2 id="submission-requirements">Submission Requirements </h2>
+<p>Once your project is done, do the following:<br>
+Your executable should be able to run with the following command "./park [options]</p>
+<ol>
+<li>Open a terminal and navigate to the project folder. Compile your code in the VM with the -g, -pthread, and - lpthread flag.</li>
+<li>Run your code and take screenshots of the output as necessary (of each part).</li>
+<li>Create valgrind logs of each respective part:<br>
+a. “valgrind --leak-check=full --tool=memcheck ./a.out &gt; log*.txt 2&gt;&amp;1 ”</li>
+<li>Tar/zip the project folder which should contain the following directories and<br>
+content. Your project should have part1, part2 and part3 folders.</li>
+</ol>
+<ul>
+<li>a. part1
+<ul>
+<li>bank.c</li>
+<li>ii. Any additional header file and their corresponding ".c" file</li>
+<li>iii. Makefile</li>
+<li>iv. Output (directory)</li>
+<li>v. valgrind log</li>
+</ul>
+</li>
+<li>b. part2
+<ul>
+<li>i. bank.c</li>
+<li>ii. Any additional header file and their corresponding ".c" file</li>
+<li>iii. Makefile</li>
+<li>iv. Output (directory)</li>
+<li>v. valgrind log</li>
+</ul>
+</li>
+<li>c. part3
+<ul>
+<li>i. bank.c</li>
+<li>ii. Any additional header file and their corresponding ".c" file</li>
+<li>iii. Makefile</li>
+<li>iv. Output (directory)</li>
+<li>v. valgrind log</li>
+</ul>
+</li>
+</ul>
+<p>Valgrind can help you spot memory leaks in your code. As a general rule any time you allocate<br>
+memory you must free it. Points will be deducted in both the labs and the project for memory<br>
+leaks so it is important that you learn how to use and read Valgrind’s output. See (https://<br>
+<a href="http://valgrind.org/">valgrind.org/</a>) for more details.</p>
+<p>The naming convention of the zip/tar file while uploading to canvas<br>
+Name_ProjectX (an example is given below)<br>
+• firstname: abie<br>
+• lastname: safdie<br>
+• Submission for: Project3<br>
+• So the name of the zip/tar file should be:<br>
+abie_safdie_Project3.zip</p>
+<h2 id="rubric">Rubric </h2>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Points</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>30</td>
+<td>Simulation runs correctly with a single thread, All critical sections are well protected with locks, Correct usage of pthread_create, Correctly return a value using pthread_join</td>
+</tr>
+<tr>
+<td>2</td>
+<td>30</td>
+<td>Simulation runs correctly with any number of threads.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>20</td>
+<td>Correct Usage of Pipes for IPC. Accurately displays live states of queues.</td>
+</tr>
+<tr>
+<td>Valgrind</td>
+<td>10</td>
+<td>No memory leak/errors. 1 point each until all 10 points are gone.</td>
+</tr>
+<tr>
+<td>Report</td>
+<td>10</td>
+<td>1 - 2 page report</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: Some sections may have more detail points than the total points, meaning there are more<br>
+than 1 way you can get a 0 in that section.</p>
+<ol>
+<li>0/100 if your program does not compile.</li>
+<li>10 points deduction if your makefile does not work</li>
+<li>30 points deduction if pthread synchronization functions used but did not contribute to the actual functionality</li>
+<li>Missing functionality caused by chain effects will not receive credit. (correctly implemented but does not work due to other mistakes)</li>
+</ol>
+<p><strong>Late Policy</strong>:</p>
+<ul>
+<li>5% penalty (1 day late)</li>
+<li>10% penalty (2 days late)</li>
+<li>20% penalty (3 days late)</li>
+<li>100% penalty (&gt;3 days late) (i.e. no points will be given to projects received after 3<br>
+days)</li>
+</ul>
+<br>
+<h2 id="appendix">Appendix </h2>
+<p><code>getopt()</code> usage from <a href="https://www.tutorialspoint.com/getopt-function-in-c-to-parse-command-line-arguments">tutorialspoint</a></p>
+<p>The getopt() is one of the built-in C function that are used for taking the command line options. The syntax of this function is like below −</p>
+<p>getopt(int argc, char *const argv[], const char *optstring)</p>
+<p>The opstring is a list of characters. Each of them representing a single character option.</p>
+<p>This function returns many values. These are like below</p>
+<ul>
+<li>If the option takes a value, then that value will be pointed by optarg.</li>
+<li>It will return -1, when no more options to proces</li>
+<li>Returns ‘?’ to show that this is an unrecognized option, it stores it to optopt.</li>
+<li>Sometimes some options need some value, If the option is present but the values are not there, then also it will return ‘?’. We can use ‘:’ as the first character of the optstring, so in that time, it will return ‘:’ instead of ‘?’ if no value is given.</li>
+</ul>
+<p>EXAMPLE: test.c</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;stdlib.h&gt;
+
+main(int argc, char *argv[]) {
+   int option;
+   int n;
+   int num_cars;
+   // put ':' at the starting of the string so compiler can distinguish between '?' and ':'
+   while((option = getopt(argc, argv, ":n:c:")) != -1){ //get option from the getopt() method
+      switch(option){
+         case 'n':
+            int n = atoi(optarg);
+            break;
+         case 'c':
+            int num_cars = atoi(optarg);
+            break;
+         case ':':
+            printf("option needs a value\n");
+            break;
+         case '?': //used for some unknown options
+            printf("unknown option: %c\n", optopt);
+            break;
+      }
+   }
+   for(; optind &lt; argc; optind++){ //when some extra arguments are passed
+      printf("Given extra arguments: %s\n", argv[optind]);
+   }
+} 
+</code></pre><p>./test -n 5 -c 5</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
