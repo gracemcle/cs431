@@ -89,13 +89,8 @@
 <li><code>pthread_create()</code></li>
 <li><code>pthread_exit()</code></li>
 <li><code>pthread_join()</code></li>
-<li><code>pthread_mutex_lock()</code></li>
-<li><code>pthread_mutex_unlock()</code></li>
-<li><code>pthread_cond_wait()</code></li>
-<li><code>pthread_cond_broadcast() or pthread_cond_signal()</code></li>
-<li><code>pthread_barrier_wait()</code></li>
-<li><code>pthread_barrier_init()</code></li>
-<li><code>sched_yield() (optional but strongly recommended)</code></li>
+<li><code>pthread_mutex_lock() and/or sem_post()</code></li>
+<li><code>pthread_mutex_unlock() and/or sem_wait()</code></li>
 </ul>
 <br>
 <h2 id="part-1-single-threaded-solution">Part 1: Single Threaded Solution </h2>
