@@ -24,12 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
  
    <div class="crossnote markdown-preview  ">
    
-<h1 id="project-3-duck-park">Project 3: Duck Park </h1>
-<p><strong>CS 415 - Operating Systems</strong><br>
-<strong>Spring 2025 - Prof. Allen Malony</strong><br>
-<strong>Due date:</strong> <em>11:59 pm, Friday June 6th</em></p>
-<h2 id="introduction">Introduction </h2>
-<p>In this project you will build a discrete element distributed simulation based on the roller coaster synchronization problem. You'll simulate an amusement park where threads enter, explore the park, obtain tickets, queue for rides, board roller coasters, disembark, and return to the park environment.</p>
+<p>cs431/docs/pic.png obtain tickets, queue for rides, board roller coasters, disembark, and return to the park environment.</p>
 <h2 id="project-details">Project Details </h2>
 <h3 id="implement-a-solution-to-the-roller-coaster-synchronization-problem-with-the-following-parameters">Implement a solution to the roller coaster synchronization problem with the following parameters: </h3>
 <p>Suppose there are <em>n</em> passenger threads and a car thread. The passengers repeatedly wait to take rides in the car, which can hold <em>C</em> passengers, where <em>C</em> &lt; <em>n</em>. The car can go around the tracks only when it is full.</p>
@@ -61,12 +56,14 @@ document.addEventListener("DOMContentLoaded", function () {
 <h3 id="implement-these-additional-features">Implement these additional features: </h3>
 <ul>
 <li>If only one thread is in the park and ready to ride, the car should depart without waiting.</li>
+<li>Place a bound on the length of the queue waiting to ride which is enforced at the ticket booth.  That is, if the queue is full, a ticket can not be issued.</li>
 <li>Add a timer to make partially-filled cars depart after a set waiting period.</li>
 <li>Use time intervals for:
 <ul>
 <li>Park exploration (sleeping)</li>
 <li>Car waiting period</li>
 <li>Ride duration</li>
+<li>Ticket transaction</li>
 </ul>
 </li>
 <li>Use random time intervals for:
@@ -78,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <br>
 <h3 id="illustration">Illustration: </h3>
 <img src="pic.png">
-<p>The figure displays three circles encapsluating the three states of the project: park, ticket, ride. In the first circle, there are four smiley faces representing threads that are hanging out in the park. From this group of smiley faces, and arrow points from them to the second conjoined circle where there is a queue of smiley faces at a ticket booth. This is labeled ticket queue. From the booth there is an arrow pointing to the third "ride" state that is labeled "embark". Here, we see two roller coasters. One is loading and one is running. Both cars are full. There are smiley faces in line waiting to embark. There is also a full roller coaster depicted to be running on the track. There is a final arrow form the ride element back to the park labeled "disembark".</p>
+<p>The figure displays three circles encapsluating the three states of the project: park, ticket, ride. In the first circle, there are four smiley faces representing threads that are hanging out in the park. From this group of smiley faces, and arrow points from them to the second conjoined circle where there is a queue of smiley faces at a ticket booth. This is labeled ticket queue. From the booth there is an arrow pointing to the third "ride" state that is labeled "embark". Here, we see two roller coasters waiting and one smiley face in the first car waiting. <strong>note</strong> The ride queue represents the processes that are waiting to get <em>in</em> the car. There is also a full roller coaster depicted to be running on the track. There is a final arrow form the ride element back to the park labeled "disembark".</p>
 <h3 id="function--lib-requirements">Function &amp; lib requirements: </h3>
 <p>Library</p>
 <ul>
@@ -337,12 +334,12 @@ abie_safdie_Project3.zip</p>
 <tr>
 <td>1</td>
 <td>30</td>
-<td>Simulation runs correctly with a single thread, All critical sections are well protected with locks, Correct usage of pthread_create, Correctly return a value using pthread_join</td>
+<td>Simulation runs correctly with a single passenger and a single car thread, All critical sections are well protected with locks, Correct usage of pthread_create, Correct usage of pthread_join. Park logic correct.</td>
 </tr>
 <tr>
 <td>2</td>
 <td>30</td>
-<td>Simulation runs correctly with any number of threads.</td>
+<td>Simulation runs correctly with any number of threads. Park logic correct.</td>
 </tr>
 <tr>
 <td>3</td>
